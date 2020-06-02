@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-    StyleSheet, Text, View, Image, Button, Alert, ImageBackground, TouchableOpacity, TextInput
+    StyleSheet, View, Image, Button, Alert
 } from 'react-native';
 
 class Header extends Component {
@@ -23,12 +23,6 @@ class Header extends Component {
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        flexDirection: 'column'
-    },
-
     header: {
         flex: 0.3,
         flexDirection: 'row',
@@ -42,21 +36,6 @@ const styles = StyleSheet.create({
     headerRight: {
         flex: 1,
         marginRight: 10
-    },
-
-    fonts: {
-        fontWeight: 'bold',
-    },
-
-    textColor: {
-        color: 'white'
-    },
-
-    textInput: {
-        borderWidth: 1,
-        borderColor: 'white',
-        padding: 5,
-        marginTop: 10
     },
 
     logo: {

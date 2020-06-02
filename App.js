@@ -1,5 +1,4 @@
 import React, { Component }  from 'react';
-import {ImageBackground, StyleSheet} from 'react-native';
 import Login from "./components/Login";
 
 export default class App extends Component {
@@ -20,12 +19,3 @@ export default class App extends Component {
         );
     }
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#81DAF5',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-});

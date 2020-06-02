@@ -25,25 +25,12 @@ class Footer extends Component {
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        flexDirection: 'column'
-    },
-
     fonts: {
         fontWeight: 'bold',
     },
 
     textColor: {
         color: 'white'
-    },
-
-    textInput: {
-        borderWidth: 1,
-        borderColor: 'white',
-        padding: 5,
-        marginTop: 10
     },
 
     logo: {
