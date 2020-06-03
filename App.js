@@ -1,21 +1,8 @@
-import React, { Component }  from 'react';
-import Login from "./components/Login";
+import React from "react";
+import Setup from "./src/boot/setup";
 
-export default class App extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            username: '@gustavo15',
-            password: 12345,
-        }
-    }
-
-    render() {
-        return (
-            <Login
-                username={ this.state.username }
-                password={this.state.password}
-            />
-        );
-    }
+export default class App extends React.Component {
+  render() {
+    return <Setup />;
+  }
 }
