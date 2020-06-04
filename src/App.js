@@ -3,6 +3,7 @@ import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from 'react-navigation-stack';
 import Login from "./modules/login/containers/Login";
 import Register from "./modules/login/containers/Register";
+import Home from "./modules/Home/containers/Home";
 
 const loginNavigator = createStackNavigator({
     Login: {
@@ -15,6 +16,12 @@ const loginNavigator = createStackNavigator({
         screen: Register,
         navigationOptions: {
             title: 'REGISTRO'
+        }
+    },
+    Home: {
+        screen: Home,
+        navigationOptions: {
+            title: 'HOME'
         }
     }
 });
