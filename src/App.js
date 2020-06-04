@@ -1,57 +1,22 @@
-import React, { Component } from "react";
-import { Container, Content, Card, CardItem, Text, Body, Button, Item, Input } from "native-base";
-import {StyleSheet} from "react-native";
-import { FontAwesome, Ionicons } from '@expo/vector-icons';
+import React  from "react";
+import { createAppContainer } from "react-navigation";
+import { createStackNavigator } from 'react-navigation-stack';
+import Login from "./modules/login/containers/Login";
+import Register from "./modules/login/containers/Register";
 
-export default class CardItemBordered extends Component {
-    render() {
-        return (
-            <Container>
-                <Content padder contentContainerStyle={ styles.content }>
-                    <Card>
-                        <CardItem header bordered>
-                            <Text style={ styles.textCenter }>LOGIN</Text>
-                        </CardItem>
-                        <CardItem bordered>
-                            <Body style={ styles.body }>
-                                <Item inlineLabel>
-                                    <FontAwesome name='user'  size={20} />
-                                    <Input placeholder='Username...' />
-                                </Item>
-                                <Item inlineLabel last>
-                                    <Ionicons name="ios-lock" size={20} />
-                                    <Input secureTextEntry={true} placeholder='Password...' />
-                                </Item>
-                            </Body>
-                        </CardItem>
-                        <CardItem footer bordered>
-                            <Button primary style={ styles.button }>
-                                <Text> Ingresar </Text>
-                            </Button>
-                        </CardItem>
-                    </Card>
-                </Content>
-            </Container>
-        );
+const loginNavigator = createStackNavigator({
+    Login: {
+        screen: Login,
+        navigationOptions: {
+            title: 'LOGIN'
+        }
+    },
+    Register: {
+        screen: Register,
+        navigationOptions: {
+            title: 'REGISTRO'
+        }
     }
-}
+});
 
-const styles = StyleSheet.create({
-    content: {
-        flex: 1,
-        justifyContent: 'center'
-    },
-
-    textCenter: {
-        textAlign: 'center',
-        width: '100%'
-    },
-
-    button: {
-        marginLeft: '70%'
-    },
-
-    body: {
-        paddingVertical: 25
-    }
-})
+export default createAppContainer(loginNavigator);
